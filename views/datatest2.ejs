@@ -144,7 +144,7 @@
 					}
 				},
 				methods: {
-					// 获取数据表所有信息
+                    
 					async getBooks() {
 						const {
 							data: res
@@ -152,14 +152,14 @@
 						this.books = res
 						console.log(this.books);
 					},
-					// 添加数据
+
 					async handle() {
 						const {
 							data: res
 						} = await axios.post('/books', this.goods)
 						this.getBooks()
 					},
-					//删除数据
+
 					async deleteBook(id) {
 						const {
 							data: res
@@ -167,7 +167,7 @@
 						console.log(res);
 						this.getBooks()
 					},
-					//编辑数据 通过id获取数据
+					
 					async editBtn(id) {
 						const {
 							data: res
@@ -175,7 +175,7 @@
 						console.log(res);
 						this.goods = res[0]
 					},
-					//修改按钮 时完成修改
+					
 					async updateBtn() {
 						const {
 							data: res
